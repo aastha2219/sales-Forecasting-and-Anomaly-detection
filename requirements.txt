@@ -1,0 +1,15 @@
+pandas
+numpy
+matplotlib
+seaborn
+plotly
+statsmodels
+prophet
+xgboost
+scikit-learn
+streamlit
+reportlab
+openpyxl
+jinja2
+ipykernel
+notebook
