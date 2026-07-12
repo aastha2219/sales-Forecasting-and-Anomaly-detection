@@ -8,6 +8,7 @@ Built with **Streamlit**, **Pandas**, **Plotly**, **Scikit-Learn**, **Prophet**,
 
 ## 🚀 Live Demo & Repository
 - **GitHub Repository**: [sales-Forecasting-and-Anomaly-detection](https://github.com/aastha2219/sales-Forecasting-and-Anomaly-detection)
+- **Live Streamlit App**: [sales-forecasting-and-anomaly-detection.streamlit.app](https://sales-forecasting-and-anomaly-detection-dfqzqqgzsvcnlkup9cqq4j.streamlit.app/)
 - **Deployment Platform**: Streamlit Cloud
 
 ---

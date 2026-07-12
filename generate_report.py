@@ -140,9 +140,11 @@ def create_report():
         [Paragraph("<b>To:</b> Chief Financial Officer & Head of Supply Chain", body_style), 
          Paragraph("<b>Date:</b> July 12, 2026", body_style)],
         [Paragraph("<b>From:</b> Lead Data Scientist (Aastha Anshu)", body_style), 
-         Paragraph("<b>Subject:</b> Multi-Source Sales Forecasting & Inventory Optimization", body_style)]
+         Paragraph("<b>Subject:</b> Multi-Source Sales Forecasting & Inventory Optimization", body_style)],
+        [Paragraph("<b>Live Dashboard:</b> <a href='https://sales-forecasting-and-anomaly-detection-dfqzqqgzsvcnlkup9cqq4j.streamlit.app/' color='#0284c7'>sales-forecasting-and-anomaly-detection.streamlit.app</a>", body_style),
+         Paragraph("", body_style)]
     ]
-    meta_table = Table(meta_data, colWidths=[270, 270])
+    meta_table = Table(meta_data, colWidths=[380, 160])
     meta_table.setStyle(TableStyle([
         ('LINEBELOW', (0, -1), (-1, -1), 1, colors.HexColor("#cbd5e1")),
         ('BOTTOMPADDING', (0, 0), (-1, -1), 4),
