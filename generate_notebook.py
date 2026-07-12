@@ -61,7 +61,7 @@ In this section, we will:
 
 # Task 1 Code
 cells.append(nbf.v4.new_code_cell("""# 1. Load the Superstore dataset
-df = pd.read_csv('train.csv', encoding='utf-8')
+df = pd.read_csv('https://raw.githubusercontent.com/aastha2219/sales-prediction-and-anomaly-detection/main/train.csv', encoding='utf-8')
 print(f"Loaded Superstore dataset with {df.shape[0]} rows and {df.shape[1]} columns.")
 
 # 2. Parse date columns as datetime
@@ -168,7 +168,7 @@ cells.append(nbf.v4.new_markdown_cell("""### Multi-Source Analysis: Merging with
 We will load `vgsales.csv` and aggregate it by Year. We will merge it with the Superstore Technology category sales (aggregated by Year) to check for correlations between Video Game Sales and Technology retail performance."""))
 
 cells.append(nbf.v4.new_code_cell("""# Load Video Game Sales dataset
-vg_df = pd.read_csv('vgsales.csv')
+vg_df = pd.read_csv('https://raw.githubusercontent.com/aastha2219/sales-prediction-and-anomaly-detection/main/vgsales.csv')
 print(f"Loaded Video Game Sales dataset with {vg_df.shape[0]} rows.")
 
 # Clean Year in Video Game Sales

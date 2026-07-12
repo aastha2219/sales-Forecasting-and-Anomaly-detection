@@ -61,7 +61,7 @@ st.markdown("""
         border-radius: 8px;
     }
 </style>
-""", unsafe_value=True)
+""", unsafe_allow_html=True)
 
 # Data loading with caching
 @st.cache_data
@@ -114,15 +114,15 @@ except Exception as e:
     st.stop()
 
 # Sidebar Navigation
-st.sidebar.markdown("<h2 style='text-align: center;'>Intelligence Hub</h2>", unsafe_value=True)
+st.sidebar.markdown("<h2 style='text-align: center;'>Intelligence Hub</h2>", unsafe_allow_html=True)
 page = st.sidebar.radio(
     "Select Workspace",
     ["📊 Sales Overview", "🔮 Forecast Explorer", "⚠️ Anomaly Report", "🎯 Demand Segments"]
 )
 
 # Header Section
-st.markdown("<h1 style='margin-bottom: 0px;'>Retail Sales Forecasting & Intelligence</h1>", unsafe_value=True)
-st.markdown("<p style='color: #64748b; font-size: 14px; margin-top: 5px;'>Powered by Advanced Analytics, Machine Learning & Forecasting Models</p>", unsafe_value=True)
+st.markdown("<h1 style='margin-bottom: 0px;'>Retail Sales Forecasting & Intelligence</h1>", unsafe_allow_html=True)
+st.markdown("<p style='color: #64748b; font-size: 14px; margin-top: 5px;'>Powered by Advanced Analytics, Machine Learning & Forecasting Models</p>", unsafe_allow_html=True)
 st.markdown("---")
 
 # ----------------- PAGE 1: SALES OVERVIEW -----------------
@@ -150,7 +150,7 @@ if page == "📊 Sales Overview":
             <span style="color:#64748b; font-size: 13px; font-weight: 600; text-transform: uppercase;">Total Revenue</span>
             <h2 style="margin: 5px 0 0 0; background: linear-gradient(90deg, #38bdf8, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${total_sales:,.2f}</h2>
         </div>
-        """, unsafe_value=True)
+        """, unsafe_allow_html=True)
     with m2:
         total_orders = filtered_df['Order ID'].nunique()
         st.markdown(f"""
@@ -158,7 +158,7 @@ if page == "📊 Sales Overview":
             <span style="color:#64748b; font-size: 13px; font-weight: 600; text-transform: uppercase;">Total Orders</span>
             <h2 style="margin: 5px 0 0 0; background: linear-gradient(90deg, #34d399, #059669); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">{total_orders:,}</h2>
         </div>
-        """, unsafe_value=True)
+        """, unsafe_allow_html=True)
     with m3:
         avg_order = filtered_df.groupby('Order ID')['Sales'].sum().mean()
         st.markdown(f"""
@@ -166,7 +166,7 @@ if page == "📊 Sales Overview":
             <span style="color:#64748b; font-size: 13px; font-weight: 600; text-transform: uppercase;">Avg Order Value</span>
             <h2 style="margin: 5px 0 0 0; background: linear-gradient(90deg, #fbbf24, #d97706); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${avg_order:,.2f}</h2>
         </div>
-        """, unsafe_value=True)
+        """, unsafe_allow_html=True)
     with m4:
         avg_ship = filtered_df['Ship_Duration'].mean()
         st.markdown(f"""
@@ -174,7 +174,7 @@ if page == "📊 Sales Overview":
             <span style="color:#64748b; font-size: 13px; font-weight: 600; text-transform: uppercase;">Avg Shipping Time</span>
             <h2 style="margin: 5px 0 0 0; background: linear-gradient(90deg, #f87171, #dc2626); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">{avg_ship:.2f} Days</h2>
         </div>
-        """, unsafe_value=True)
+        """, unsafe_allow_html=True)
         
     # Charts Section
     col1, col2 = st.columns(2)
